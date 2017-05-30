@@ -109,11 +109,11 @@ def generateObject(name, subsystem):
     result['category'] = name
     if 'minWorkingTemp' in subsystem.keys(): # general rule
         if not name == 'structure':
-            result['power'] = randomValue(subsystem['power'])   
+            result['power'] = randomValue(subsystem['power'])
         result['minWorkingTemp'] = randomValue(subsystem['minWorkingTemp'])
         result['maxWorkingTemp'] = randomValue(subsystem['maxWorkingTemp'])
         if 'density' in subsystem.keys():  # rule power or battery
-            result['volume'] = int(result['mass'] / subsystem['density']) // 1        
+            result['volume'] = int(result['mass'] / subsystem['density']) // 1
             if name == 'primary power':
                 result['cost'] = result['power'] * 5
                 return result
@@ -130,12 +130,12 @@ def generateObject(name, subsystem):
                 return result
             else:
                 if name == 'structure':
-                    result['power'] = 0  
+                    result['power'] = 0
                     result['cost'] = int(350000 / result['mass']) // 1
                     return result
                 elif name == 'attitude and orbit control':
                     if result['power'] > 0:
-                        result['power'] = 0 
+                        result['power'] = 0
                         result['type'] = 'passive'
                         result['mechanism'] = random.choice(subsystem['passive'])
                     else:
@@ -147,7 +147,7 @@ def generateObject(name, subsystem):
     else: # rule for thermal
         result['volume'] = result['mass'] + randomValue({'min': -5, 'max': 5})
         result['power'] = randomValue(subsystem['power'])
-        if result['power'] > 0 : result['power'] = 0 
+        if result['power'] > 0 : result['power'] = 0
         result['minTemperature'] = randomValue(subsystem['minTemperature'])
         result['maxTemperature'] = randomValue(subsystem['maxTemperature'])
 
@@ -161,7 +161,7 @@ def generateObject(name, subsystem):
 
 output = []
 i = 0
-for i in range(0, 3):
+for i in range(0, 1):
     for k, v in subsystems.items():
         # print(k)
         name = str(random.randrange(0, 50)) + str(random.choice(['T', 'W', 'KV', 'JFG'])) + ' ' + k
@@ -171,12 +171,5 @@ for i in range(0, 3):
         obj['object'] = generateObject(k, v)
         output.append(obj)
         i += 1
-    
+
 print(json.dumps(output, indent=4))
-
-
-
-            
-
-
-
