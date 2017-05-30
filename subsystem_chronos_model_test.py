@@ -30,21 +30,29 @@ class SubSysType:
 
 
 cubicMillimeters = SubSysType('cubicMillimeters', [hasVolume])
-spacecraft_Detector = SubSysType('Spacecraft_Detector', [
-                                 hasWireOutWith, hasWireInWith, maxWorkingTemperature, minWorkingTemperature, hasVolta])
-spacecraft_Propulsion = SubSysType('Spacecraft_Propulsion', [
-                                   hasSpecificImpulse, maxWorkingTemperature, minWorkingTemperature, hasWireInWith])
+spacecraft_Detector = SubSysType('Spacecraft_Detector', [hasWireOutWith,
+                                                         hasWireInWith,
+                                                         maxWorkingTemperature,
+                                                         minWorkingTemperature,
+                                                         hasVolta])
+spacecraft_Propulsion = SubSysType('Spacecraft_Propulsion', [hasSpecificImpulse,
+                                                             maxWorkingTemperature,
+                                                             minWorkingTemperature,
+                                                             hasWireInWith])
 
-spacecraft_PrimaryPower = SubSysType('Spacecraft_PrimaryPower', [
-                                     maxWorkingTemperature, minWorkingTemperature, hasWireOutWith])
+spacecraft_PrimaryPower = SubSysType('Spacecraft_PrimaryPower', [maxWorkingTemperature,
+                                                                 minWorkingTemperature,
+                                                                 hasWireOutWith])
 
-spacecraft_BackupPower = SubSysType('Spacecraft_BackupPower', [
-                                    minWorkingTemperature, maxWorkingTemperature, hasWireOutWith, hasWireInWith])
+spacecraft_BackupPower = SubSysType('Spacecraft_BackupPower', [minWorkingTemperature,
+                                                               maxWorkingTemperature,
+                                                               hasWireOutWith,
+                                                               hasWireInWith])
 
 spacecraft_Thermal = SubSysType('Spacecraft_Thermal', [])
 
 spacecraft_Thermal_PassiveDevice = SubSysType('Spacecraft_Thermal_PassiveDevice', [
-                                              maxWorkingTemperature, minWorkingTemperature])
+    maxWorkingTemperature, minWorkingTemperature])
 
 spacecraft_Thermal_ActiveDevice = SubSysType(
     'Spacecraft_Thermal_ActiveDevice', [hasWireInWith])
@@ -52,14 +60,18 @@ spacecraft_Thermal_ActiveDevice = SubSysType(
 spacecraft_Structure = SubSysType(
     'Spacecraft_Structure', [maxWorkingTemperature, minWorkingTemperature])
 
-spacecraft_CDH = SubSysType('Spacecraft_CDH', [
-                            minWorkingTemperature, maxWorkingTemperature, hasWireOutWith, hasWireInWith])
+spacecraft_CDH = SubSysType('Spacecraft_CDH', [minWorkingTemperature,
+                                               maxWorkingTemperature,
+                                               hasWireOutWith,
+                                               hasWireInWith])
 
-spacecraft_Communication = SubSysType('Spacecraft_Communication', [
-                                      maxWorkingTemperature, minWorkingTemperature, hasWireOutWith, hasWireInWith])
+spacecraft_Communication = SubSysType('Spacecraft_Communication', [maxWorkingTemperature,
+                                                                   minWorkingTemperature,
+                                                                   hasWireOutWith,
+                                                                   hasWireInWith])
 
 spacecraft_AODCS = SubSysType('Spacecraft_AODCS', [
-                              minWorkingTemperature, maxWorkingTemperature, hasWireOutWith])
+    minWorkingTemperature, maxWorkingTemperature, hasWireOutWith])
 
 spacecraft_AODCS_Active = SubSysType('Spacecraft_AODCS_Active', hasWireInWith)
 

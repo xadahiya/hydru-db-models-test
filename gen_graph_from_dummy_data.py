@@ -27,23 +27,78 @@ class SubSysType:
         self.type_ = type_
         self.allowed_properties = allowed_properties
 
-communication = SubSysType('communication', [slug, ontology, power, mass, min_working_temp, max_working_temp])
+# Subsystems instantiation
+communication = SubSysType('communication', [slug,
+                                             ontology,
+                                             power,
+                                             mass,
+                                             min_working_temp,
+                                             max_working_temp])
 
-propulsion = SubSysType('propulsion', [slug, ontology, power, mass, cost, min_working_temp, max_working_temp])
+propulsion = SubSysType('propulsion', [slug,
+                                       ontology,
+                                       power,
+                                       mass,
+                                       cost,
+                                       min_working_temp,
+                                       max_working_temp])
 
-detector = SubSysType('detector', [slug, ontology, power, mass, cost, min_working_temp, max_working_temp])
+detector = SubSysType('detector', [slug,
+                                   ontology,
+                                   power,
+                                   mass,
+                                   cost,
+                                   min_working_temp,
+                                   max_working_temp])
 
-primary_power = SubSysType('primary power', [slug, ontology, power, density, mass, cost, min_working_temp, max_working_temp])
+primary_power = SubSysType('primary power', [slug,
+                                             ontology,
+                                             power,
+                                             density,
+                                             mass,
+                                             cost,
+                                             min_working_temp,
+                                             max_working_temp])
 
-backup_power = SubSysType('backup power', [slug, ontology, power, density, mass, cost, min_working_temp, max_working_temp])
+backup_power = SubSysType('backup power', [slug,
+                                           ontology,
+                                           power,
+                                           density,
+                                           mass,
+                                           cost,
+                                           min_working_temp,
+                                           max_working_temp])
 
-thermal = SubSysType('thermal', [slug, ontology, power, mass, cost, min_working_temp, max_working_temp])
+thermal = SubSysType('thermal', [slug,
+                                 ontology,
+                                 power,
+                                 mass,
+                                 cost,
+                                 min_working_temp,
+                                 max_working_temp])
 
-structure = SubSysType('structure', [slug, ontology, mass, cost, min_working_temp, max_working_temp])
+structure = SubSysType('structure', [slug,
+                                     ontology,
+                                     mass,
+                                     cost,
+                                     min_working_temp,
+                                     max_working_temp])
 
-command_and_data = SubSysType('command and data', [slug, ontology, power, mass, cost, min_working_temp, max_working_temp])
+command_and_data = SubSysType('command and data', [slug,
+                                                   ontology,
+                                                   power,
+                                                   mass,
+                                                   cost,
+                                                   min_working_temp,
+                                                   max_working_temp])
 
-attitude_and_orbit_control = SubSysType('attitude and orbit control', [slug, ontology, power, mass, cost, min_working_temp, max_working_temp])
+attitude_and_orbit_control = SubSysType('attitude and orbit control', [slug,
+                                                                       ontology,
+                                                                       power,
+                                                                       mass,
+                                                                       cost,
+                                                                       min_working_temp,
+                                                                       max_working_temp])
 
 class Resource:
     def __init__(self, name, type_):
